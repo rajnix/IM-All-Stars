@@ -102,7 +102,7 @@ export default function CourseHero() {
             {/* Brand Badge */}
             <div className="inline-flex">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-violet-500/10 text-violet-300 border border-violet-500/20">
-                Invisible Mechanics Presents
+                🔥 Limited Seats — Singapore Cohort 2025
               </span>
             </div>
 
@@ -113,23 +113,31 @@ export default function CourseHero() {
                   id="hero-heading"
                   className="text-3xl sm:text-4xl lg:text-[2.8rem] font-bold tracking-tight text-white leading-tight"
                 >
-                  IM-All Stars 2026
+                  From Zero to JEE-Level Physics in 10 Weeks
                 </h1>
-                <p className="text-sm sm:text-base text-gray-400">
-                  Flagship JEE Mains Physics Program by Invisible Mechanics
-                </p>
               </div>
 
               {/* Main Description */}
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                20 intense problem-solving sessions, mock tests, and ranker mentorship designed to push you towards <span className="font-semibold text-white">100/100 in JEE Mains Physics</span>.
+                An exclusive offline cohort in Singapore for Indian students — designed to build concepts from scratch and push you to advanced problem-solving.
               </p>
             </div>
 
-            {/* Positioning Text */}
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl">
-              This isn&apos;t about more lectures — it&apos;s about learning how toppers think inside the exam hall.
-            </p>
+            {/* Stat Pills */}
+            <div className="flex flex-wrap gap-3">
+              <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/5 text-gray-300 border border-white/10">
+                📍 Offline · Singapore
+              </span>
+              <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/5 text-gray-300 border border-white/10">
+                👨‍🏫 3 Star Educators
+              </span>
+              <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/5 text-gray-300 border border-white/10">
+                📅 10 Weeks
+              </span>
+              <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/5 text-gray-300 border border-white/10">
+                💵 $50 / Session
+              </span>
+            </div>
 
             {/* Countdown Timer */}
             <div className="mt-4">
@@ -147,32 +155,20 @@ export default function CourseHero() {
                 }}
                 className="group px-8 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-violet-500/50 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-[#0B0B10]"
               >
-                Apply for IM-All Stars 2026
+                Apply Now →
               </button>
               <button 
                 onClick={handleCallClick}
                 className="px-8 py-4 rounded-full text-base font-semibold text-white bg-transparent border-2 border-violet-500/50 hover:border-violet-400 hover:bg-violet-500/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-[#0B0B10]"
               >
-                Call For More Details
+                Contact on WhatsApp
               </button>
             </div>
 
-            {/* Social Proof Badges */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 max-w-2xl">
-              {/* Badge 1 */}
-              <div className="rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm p-4 space-y-1">
-                <p className="text-xs text-gray-400 font-medium">JEE Advanced 2025 Results</p>
-                <p className="text-xl sm:text-2xl font-bold text-white">85 / 120 in Physics</p>
-                <p className="text-sm text-gray-400">Divesh Khatwani · AIR 1945</p>
-              </div>
-
-              {/* Badge 2 */}
-              <div className="rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm p-4 space-y-1">
-                <p className="text-xs text-gray-400 font-medium">JEE Advanced 2025 Results</p>
-                <p className="text-xl sm:text-2xl font-bold text-white">88 / 120 in Physics</p>
-                <p className="text-sm text-gray-400">Tushar Chinchanikar · AIR 2301</p>
-              </div>
-            </div>
+            {/* Below CTA small text */}
+            <p className="text-xs sm:text-sm text-gray-500">
+              Batch starting soon · Limited seats remaining
+            </p>
           </div>
 
           {/* Right Column - AmbiLight Video */}

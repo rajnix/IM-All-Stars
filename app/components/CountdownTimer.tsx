@@ -68,19 +68,9 @@ export default function CountdownTimer() {
     return () => clearInterval(interval);
   }, [TARGET_DATE]);
 
-  // Expired state
+  // Expired state - return null to hide the component
   if (timeLeft.isExpired) {
-    return (
-      <div className="inline-flex flex-col gap-1">
-        <div className="inline-flex items-center gap-2 rounded-full border border-red-400/60 bg-red-500/10 px-4 py-2 text-xs sm:text-sm font-medium text-red-200">
-          <span className="h-2 w-2 rounded-full bg-red-400 animate-pulse" />
-          <span>Enrollments are now closed</span>
-        </div>
-        <span className="text-[10px] text-gray-500 pl-4">
-          Check back for future batches.
-        </span>
-      </div>
-    );
+    return null;
   }
 
   // Active countdown - compact pill style

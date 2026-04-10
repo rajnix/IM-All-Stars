@@ -17,15 +17,17 @@ export default function RoadmapSection() {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         {/* Heading and Subheading */}
         <div className="max-w-3xl mx-auto text-center">
+          <p className="text-sm font-semibold text-violet-400 uppercase tracking-wide mb-3">
+            WHAT YOU&apos;LL LEARN
+          </p>
           <h2
             id="roadmap-heading"
             className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white"
           >
-            Your JEE Mains Physics roadmap (Dec 1 – Jan 15)
+            Your 10-Week Transformation
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-gray-400">
-            A structured 45-day journey to push your Physics score as close as possible to
-            100/100 — with tests, sessions, systems and mentorship mapped out for you.
+          <p className="mt-6 text-base sm:text-lg text-gray-300 font-semibold">
+            Confused → Confident → Competitive
           </p>
         </div>
 

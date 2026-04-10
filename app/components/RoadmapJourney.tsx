@@ -17,86 +17,58 @@ interface RoadmapStep {
 const ROADMAP_STEPS: RoadmapStep[] = [
   {
     id: 1,
-    phase: 'PHASE 1',
-    dateRange: 'Dec 1 – Dec 3',
-    title: 'Baseline test &',
-    subtitle: '100/100 gameplan',
+    phase: 'WEEK 1–2',
+    dateRange: 'Week 1–2',
+    title: 'Foundations Rebuilt',
+    subtitle: '',
     description:
-      'You start with a diagnostic Physics test and a short form. We analyse your strengths, weak zones and silly-mistake patterns, then build a personalised target plan for the next 45 days.',
+      'Basics from ground up — units, kinematics, vectors, and measurement.',
     bullets: [
-      'Full-length baseline Physics test',
-      'Detailed score + accuracy breakdown',
-      'Personalised topic priority list',
+      'Building blocks from scratch',
+      'No assumed prior knowledge',
+      'Clear conceptual understanding',
     ],
   },
   {
     id: 2,
-    phase: 'PHASE 2',
-    dateRange: 'Dec 4 – Dec 15',
-    title: 'Core concepts +',
-    subtitle: 'power problem-solving',
+    phase: 'WEEK 3–5',
+    dateRange: 'Week 3–5',
+    title: 'Core Concepts',
+    subtitle: '',
     description:
-      'We hit all high-weightage JEE Mains topics with intense problem-solving sessions focused on approach, shortcuts and examiner mindset.',
+      'Laws of motion, energy, momentum, and standard problem types.',
     bullets: [
-      'Daily targeted question sets + DPPs',
-      'Live discussions on multiple ways to think',
-      'Formula & standard results workbook in use',
+      'Essential Physics principles',
+      'Standard JEE problem patterns',
+      'Building problem-solving foundation',
     ],
   },
   {
     id: 3,
-    phase: 'PHASE 3',
-    dateRange: 'Dec 16 – Dec 24',
-    title: 'PYQ marathons &',
-    subtitle: 'pattern recognition',
+    phase: 'WEEK 6–8',
+    dateRange: 'Week 6–8',
+    title: 'Advanced Applications',
+    subtitle: '',
     description:
-      "You solve and discuss past years' JEE Mains Physics questions chapter-wise, spotting repeated ideas and traps.",
+      'JEE-level multi-concept problems and derivations.',
     bullets: [
-      'PYQ clusters by chapter and pattern',
-      'Error log system introduced and enforced',
-      'Speed vs accuracy tracking begins',
+      'Complex problem solving',
+      'Multi-concept integration',
+      'Advanced derivations',
     ],
   },
   {
     id: 4,
-    phase: 'PHASE 4',
-    dateRange: 'Dec 25 – Jan 5',
-    title: 'Full-length mocks &',
-    subtitle: 'deep analysis',
+    phase: 'WEEK 9–10',
+    dateRange: 'Week 9–10',
+    title: 'Exam Readiness',
+    subtitle: '',
     description:
-      'We shift into exam mode with multiple full-length Physics mocks plus ranker-style post-test breakdowns.',
+      'Mixed practice, full simulations, and test-taking strategies.',
     bullets: [
-      'JEE Mains-style Physics mock tests',
-      'Session-wise analysis of silly mistakes',
-      'Strategy tweaks from top rankers',
-    ],
-  },
-  {
-    id: 5,
-    phase: 'PHASE 5',
-    dateRange: 'Jan 6 – Jan 12',
-    title: 'Fine-tuning &',
-    subtitle: 'advanced drills',
-    description:
-      'Now we plug remaining leaks with targeted drills on weak topics, mixed-bag tests and time-pressure sets.',
-    bullets: [
-      'Micro-mocks on your personal weak zones',
-      'Mixed-topic sets under strict time limits',
-      'Mentorship on attempt strategy & guesswork',
-    ],
-  },
-  {
-    id: 6,
-    phase: 'WIN',
-    dateRange: 'Jan 13 – Jan 15',
-    title: 'Final 100/100',
-    subtitle: 'war-room',
-    description:
-      'The last phase is all about calm, clarity and sharp recall — not cramming.',
-    bullets: [
-      'Daily "no-regret" revision checklist',
-      'Rapid-fire formula and graph revisions',
-      'Light mocks + mindset sessions so you enter the hall confident',
+      'Full-length mock tests',
+      'Exam strategies and techniques',
+      'Final preparation and confidence building',
     ],
   },
 ];
@@ -112,7 +84,7 @@ const PhaseChip: React.FC<PhaseChipProps> = ({ phase, isActive, onClick }) => (
   <motion.button
     onClick={onClick}
     className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
-      phase === 'WIN'
+      phase.includes('WEEK 9')
         ? 'bg-gradient-to-r from-emerald-500/15 to-emerald-600/15 text-emerald-300 border border-emerald-500/40 hover:border-emerald-400/60 hover:bg-emerald-500/25'
         : isActive
         ? 'bg-gradient-to-r from-violet-500/25 to-indigo-500/25 text-violet-200 border border-violet-400/60 shadow-lg shadow-violet-500/20'
@@ -182,7 +154,7 @@ export default function RoadmapJourney() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-violet-500 shadow-lg shadow-violet-500/50"></span>
                 </span>
-                <span className="text-sm font-medium text-slate-100">Start · Dec 1</span>
+                <span className="text-sm font-medium text-slate-100">Start · Week 1</span>
               </motion.div>
             </div>
 
@@ -206,7 +178,7 @@ export default function RoadmapJourney() {
                   className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-violet-500/15 to-indigo-500/15 border border-violet-500/40 backdrop-blur-sm shadow-xl shadow-violet-500/20"
                 >
                   <span className="flex h-3 w-3 rounded-full bg-emerald-400 shadow-lg shadow-emerald-400/60" />
-                  <span className="text-sm font-semibold text-violet-100">100/100 Target · Jan 15</span>
+                  <span className="text-sm font-semibold text-violet-100">JEE Ready · Week 10</span>
                 </motion.div>
               </div>
 
@@ -250,7 +222,7 @@ export default function RoadmapJourney() {
                         <div>
                           <div className="flex items-center gap-3 mb-2">
                             <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full ${
-                              step.phase === 'WIN'
+                              step.phase.includes('WEEK 9')
                                 ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
                                 : 'bg-violet-500/20 text-violet-200 border border-violet-500/40'
                             }`}>
@@ -298,7 +270,7 @@ export default function RoadmapJourney() {
           <div className="text-center">
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-800/80 border border-violet-500/30 backdrop-blur-sm">
               <span className="flex h-2 w-2 rounded-full bg-violet-400 animate-pulse" />
-              <span className="text-xs font-medium text-slate-100">Start · Dec 1</span>
+              <span className="text-xs font-medium text-slate-100">Start · Week 1</span>
             </div>
           </div>
 
@@ -331,7 +303,7 @@ export default function RoadmapJourney() {
                   >
                     <div className="mb-2">
                       <span className={`inline-block text-[10px] font-semibold px-2.5 py-1 rounded-full ${
-                        step.phase === 'WIN'
+                        step.phase.includes('WEEK 9')
                           ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30'
                           : 'bg-slate-800/80 text-slate-300 border border-slate-700'
                       }`}>
@@ -381,7 +353,7 @@ export default function RoadmapJourney() {
           <div className="text-center pt-2">
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-violet-500/15 border border-violet-500/40 backdrop-blur-sm">
               <span className="flex h-2 w-2 rounded-full bg-emerald-400" />
-              <span className="text-xs font-semibold text-violet-100">100/100 Target · Jan 15</span>
+              <span className="text-xs font-semibold text-violet-100">JEE Ready · Week 10</span>
             </div>
           </div>
         </div>

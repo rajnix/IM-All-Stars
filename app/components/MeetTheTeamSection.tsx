@@ -14,22 +14,22 @@ interface TeamMember {
 export default function MeetTheTeamSection() {
   const team: TeamMember[] = [
     {
-      name: 'Aditya Jha',
-      role: 'Lead Educator · IM-All Stars',
-      bio: "Adi bhaiya leads the IM-All Stars program and designs every session, test, and workbook. Last year his students Divesh (85/120) and Tushar (88/120) in JEE Advanced Physics — plus many ranks from his YouTube channel — converted to top performances under his guidance.",
-      imageSrc: '/team/aditya.png',
+      name: 'Educator 1',
+      role: 'Mechanics & Kinematics',
+      bio: "Expert in foundational Physics. Known for simplifying toughest concepts. Hundreds of JEE aspirants trained.",
+      imageSrc: '/team/educator1.png',
     },
     {
-      name: 'Divesh Khatwani',
-      role: 'IIT Bombay - Aerospace (AIR 1945)',
-      bio: "Divesh was part of IM-All Stars 2025 and scored 85/120 in JEE Advanced Physics. He's now pursuing Aerospace Engineering at IIT Bombay, helping you with doubt-solving, test analysis, and the same exam-hall strategies that worked for him.",
-      imageSrc: '/team/divesh.jpeg',
+      name: 'Educator 2',
+      role: 'Electrodynamics',
+      bio: "Specialist in Electrodynamics. Focus on exam-oriented strategies. High success rate among students.",
+      imageSrc: '/team/educator2.png',
     },
     {
-      name: 'Rajbir Chakraborty',
-      role: 'IIT Madras - Data Science (AIR 336)',
-      bio: "Rajbir is a 2nd-year Data Science student at IIT Madras (AIR 336). He runs the Telegram community, leads weekly talk sessions, and helps students handle routine, stress, and preparation systems from the perspective of a recent ranker.",
-      imageSrc: '/team/rajbir.jpeg',
+      name: 'Educator 3',
+      role: 'Advanced Physics',
+      bio: "Advanced Physics mentor. Helps students crack high-level problems. Deep focus on conceptual clarity.",
+      imageSrc: '/team/educator3.png',
     },
   ];
 
@@ -73,14 +73,17 @@ export default function MeetTheTeamSection() {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading block */}
         <div className="text-center mb-12 lg:mb-16 space-y-3">
+          <p className="text-sm font-semibold text-violet-400 uppercase tracking-wide">
+            YOUR MENTORS
+          </p>
           <h2
             id="team-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white"
           >
-            Meet the team
+            Learn From The Best
           </h2>
           <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
-            The people behind your 45-day physics turnaround.
+            📊 500+ JEE aspirants taught combined
           </p>
         </div>
 

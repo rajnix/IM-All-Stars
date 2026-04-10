@@ -5,27 +5,27 @@ import TiltCardGrid, { PillarCard } from './TiltCardGrid';
 
 const PROGRAM_PILLARS: PillarCard[] = [
   {
-    id: 'problem-solving',
-    title: 'Problem-solving labs',
-    description: "High-yield JEE Mains problems solved in a lab format, where we break patterns, build shortcuts, and train you to answer in under a minute per question.",
+    id: 'conceptual-foundations',
+    title: 'Conceptual Foundations',
+    description: "Built from scratch. No assumed knowledge.",
     iconType: 'target',
   },
   {
-    id: 'doubt-solving',
-    title: 'Doubt-solving support',
-    description: "Structured doubt support for every lecture and DPP so you're never stuck on a concept or problem when you sit down to practice.",
+    id: 'problem-solving-speed',
+    title: 'Problem Solving Speed',
+    description: "JEE tempo drills and timed practice.",
     iconType: 'lightbulb',
   },
   {
-    id: 'guidance',
-    title: 'Guidance & mentorship',
-    description: "Exact study plans, attempt strategies, and ranker-style feedback on your progress so you always know what to do each week till the January attempt.",
+    id: 'jee-level-questions',
+    title: 'JEE-Level Questions',
+    description: "Real exam patterns, real difficulty.",
     iconType: 'graduation',
   },
   {
-    id: 'mocks',
-    title: 'Mocks & discussions',
-    description: "JEE Mains–pattern mocks with live discussions, detailed solutions, and performance analysis to fix weak spots and sharpen your exam-day temperament.",
+    id: 'top-performer-mindset',
+    title: 'Top Performer Mindset',
+    description: "Think, approach, and solve like rankers.",
     iconType: 'chart',
   },
 ];
@@ -44,14 +44,17 @@ export default function ProgramPillars() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         {/* Section Heading */}
         <div className="max-w-3xl mx-auto text-center mb-12">
+          <p className="text-sm font-semibold text-violet-400 uppercase tracking-wide mb-3">
+            THE PROGRAM
+          </p>
           <h2
             id="pillars-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-3"
           >
-            Four pillars of the program
+            This Is Not Just Another Coaching Class
           </h2>
           <p className="text-base sm:text-lg text-slate-300/80 leading-relaxed max-w-2xl mx-auto">
-            Everything designed to push your Physics score as close as possible to 100/100
+            We&apos;ve designed a 10-week intensive Physics cohort specifically for Indian students preparing for JEE, currently based in Singapore. Whether you&apos;re struggling with basics or aiming for top ranks, this program will get you there.
           </p>
         </div>
 
