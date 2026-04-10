@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import BookingSeatModal from './BookingSeatModal';
 
 // Types
 type FeatureCategory = 'core' | 'support';
@@ -54,6 +55,8 @@ const CrossIcon = ({ className = '' }: { className?: string }) => (
 
 export default function PlanComparisonTable() {
   const [activeFilter, setActiveFilter] = useState<FilterOption>('all');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<'excel' | 'conquer' | 'general'>('general');
 
   // Plan data
   const plans: Plan[] = [
@@ -310,25 +313,57 @@ export default function PlanComparisonTable() {
                       </td>
                     </tr>
                   ))}
+                  {/* Book Your Seat buttons row */}
+                  <tr>
+                    <td className="sticky left-0 z-10 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl px-4 sm:px-6 py-6">
+                      {/* Empty cell for features column */}
+                    </td>
+                    
+                    {/* Excel plan button */}
+                    <td className="px-4 sm:px-6 py-6 text-center">
+                      <div className="flex flex-col items-center gap-3">
+                        <button 
+                          onClick={() => {
+                            setSelectedPlan('excel');
+                            setIsModalOpen(true);
+                          }}
+                          className="w-full px-6 py-3 rounded-full text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#020617]"
+                        >
+                          Book Excel →
+                        </button>
+                      </div>
+                    </td>
+
+                    {/* Conquer plan button */}
+                    <td className="px-4 sm:px-6 py-6 text-center bg-gradient-to-br from-violet-600/5 to-indigo-600/5">
+                      <div className="flex flex-col items-center gap-3">
+                        <button 
+                          onClick={() => {
+                            setSelectedPlan('conquer');
+                            setIsModalOpen(true);
+                          }}
+                          className="w-full px-6 py-3 rounded-full text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-violet-500/50 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-[#020617] relative"
+                          style={{
+                            boxShadow: '0 0 20px rgba(139, 92, 246, 0.4)',
+                          }}
+                        >
+                          <span className="relative z-10">Book Conquer →</span>
+                          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 blur-sm opacity-50" />
+                        </button>
+                        <span className="text-xs text-violet-300 font-medium">
+                          ⭐ Most Popular
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
           </div>
 
-          {/* Bottom CTA (optional) */}
-          <div className="mt-8 pt-6 border-t border-white/10">
-            <div className="flex flex-col items-center gap-4">
-              <button 
-                onClick={() => {
-                  const pricingSection = document.getElementById('pricing');
-                  if (pricingSection) {
-                    pricingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }}
-                className="px-8 py-3 rounded-full text-base font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-violet-500/50 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-[#020617]"
-              >
-                Book Your Seat →
-              </button>
+          {/* Bottom notice */}
+          <div className="mt-6 pt-4 border-t border-white/10">
+            <div className="text-center">
               <p className="text-xs sm:text-sm text-gray-400">
                 ⚡ Limited seats available — batch filling up fast
               </p>
@@ -336,6 +371,13 @@ export default function PlanComparisonTable() {
           </div>
         </div>
       </div>
+
+      {/* Booking Modal */}
+      <BookingSeatModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)}
+        plan={selectedPlan}
+      />
     </section>
   );
 }

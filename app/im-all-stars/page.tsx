@@ -60,6 +60,7 @@ export default function IMAllStarsPage() {
         <MeetTheTeamSection />
         <PlanComparisonTable />
       </div>
+
     </main>
   );
 }
