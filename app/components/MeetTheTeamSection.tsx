@@ -14,22 +14,16 @@ interface TeamMember {
 export default function MeetTheTeamSection() {
   const team: TeamMember[] = [
     {
-      name: 'Educator 1',
-      role: 'Mechanics & Kinematics',
-      bio: "Expert in foundational Physics. Known for simplifying toughest concepts. Hundreds of JEE aspirants trained.",
-      imageSrc: '/team/educator1.png',
+      name: 'Aditya Jha',
+      role: 'Lead Educator · IM-All Stars',
+      bio: "Adi bhaiya leads the IM-All Stars program and designs every session, test, and workbook. Last year his students Divesh (85/120) and Tushar (88/120) in JEE Advanced Physics — plus many ranks from his YouTube channel — converted to top performances under his guidance.",
+      imageSrc: '/team/aditya.jpg',
     },
     {
-      name: 'Educator 2',
-      role: 'Electrodynamics',
-      bio: "Specialist in Electrodynamics. Focus on exam-oriented strategies. High success rate among students.",
+      name: 'Rajbir Chakraborty',
+      role: 'IIT Madras - Data Science (AIR 336)',
+      bio: "Rajbir is a 2nd-year Data Science student at IIT Madras (AIR 336). He runs the Telegram community, leads weekly talk sessions, and helps students handle routine, stress, and preparation systems from the perspective of a recent ranker.",
       imageSrc: '/team/educator2.png',
-    },
-    {
-      name: 'Educator 3',
-      role: 'Advanced Physics',
-      bio: "Advanced Physics mentor. Helps students crack high-level problems. Deep focus on conceptual clarity.",
-      imageSrc: '/team/educator3.png',
     },
   ];
 
@@ -83,13 +77,13 @@ export default function MeetTheTeamSection() {
             Learn From The Best
           </h2>
           <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
-            📊 500+ JEE aspirants taught combined
+            📊 10,000+ JEE aspirants taught combined
           </p>
         </div>
 
         {/* Team cards grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
