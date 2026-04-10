@@ -94,7 +94,7 @@ export default function CourseHero() {
       <div className="absolute top-0 left-1/4 h-96 w-96 bg-violet-600/20 blur-3xl rounded-full -translate-y-1/2" />
       <div className="absolute bottom-0 right-1/4 h-96 w-96 bg-indigo-600/20 blur-3xl rounded-full translate-y-1/2" />
       
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-12 lg:pt-16 lg:pb-16">
         <div className="flex flex-col lg:flex-row gap-10 lg:items-stretch">
           
           {/* Left Column - Main Content */}

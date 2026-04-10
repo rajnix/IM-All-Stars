@@ -11,7 +11,14 @@ type TimeLeft = {
 };
 
 export default function CountdownTimer() {
-  const TARGET_DATE = new Date("2025-12-01T23:59:59+05:30");
+  // Set target date to 20 days from now
+  const getTargetDate = () => {
+    const now = new Date();
+    const target = new Date(now.getTime() + (20 * 24 * 60 * 60 * 1000)); // 20 days in milliseconds
+    return target;
+  };
+  
+  const TARGET_DATE = getTargetDate();
 
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,

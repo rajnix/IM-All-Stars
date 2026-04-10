@@ -1,9 +1,7 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import React from 'react';
 import Image from 'next/image';
-import Preloader from '../components/Preloader';
 import CourseHero from '../components/CourseHero';
 import ProgramPillars from '../components/ProgramPillars';
 import RoadmapSection from '../components/RoadmapSection';
@@ -12,22 +10,8 @@ import PlanComparisonTable from '../components/PlanComparisonTable';
 import MeetTheTeamSection from '../components/MeetTheTeamSection';
 
 export default function IMAllStarsPage() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 4800);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <main className="relative min-h-screen bg-[#050816] text-white overflow-hidden">
-      <AnimatePresence>
-        {isLoading && <Preloader isVisible={isLoading} />}
-      </AnimatePresence>
-
       {/* Logo - Fixed at top left */}
       <div className="fixed top-4 left-4 z-40 sm:top-6 sm:left-6">
         <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -69,13 +53,7 @@ export default function IMAllStarsPage() {
       <VerticalDialNav />
 
       {/* Page content */}
-      <div 
-        className={
-          isLoading 
-            ? "pointer-events-none opacity-0" 
-            : "opacity-100 transition-opacity duration-500"
-        }
-      >
+      <div>
         <CourseHero />
         <ProgramPillars />
         <RoadmapSection />
